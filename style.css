@@ -1,6 +1,13 @@
- #container {
+#wrapper {
     width: 400px;
     margin: 15px auto 15px auto;
+    text-align: center;
+}
+button {
+    margin: 15px auto 15px auto;
+}
+#container {
+    width: 400px;
     display: flex;
     flex-wrap: wrap;
     background-color: gray;

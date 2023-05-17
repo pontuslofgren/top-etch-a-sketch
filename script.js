@@ -1,27 +1,40 @@
 // Store number of squares in grid to a variable
-let numberOfSquares = Math.pow(16, 2)
+let usrInputGridSize = 16;
 
-// Set square dimension based on numberOfSquares
-const squareDimension = 400 / Math.sqrt(numberOfSquares);
+function draw(usrInputGridSize) {
 
-// Create grid
-const container = document.querySelector('#container');
+    let numberOfSquares = Math.pow(usrInputGridSize, 2)
 
-for (let i = 0; i < numberOfSquares; i++) {
-    const square = document.createElement('div');
-    square.setAttribute('id', i+1);
-    square.classList.add('square');
-    square.style = `width: ${squareDimension}px; height: ${squareDimension}px;`;
-    container.appendChild(square);
-  }
+    // Set square dimension based on numberOfSquares
+    const squareDimension = 400 / Math.sqrt(numberOfSquares);
 
+    // Create grid
+    const container = document.querySelector('#container');
 
-// Add hover effect
-  const gridSquares = document.querySelectorAll('.square');
+    for (let i = 0; i < numberOfSquares; i++) {
+        const square = document.createElement('div');
+        square.setAttribute('id', i+1);
+        square.classList.add('square');
+        square.style = `width: ${squareDimension}px; height: ${squareDimension}px;`;
+        container.appendChild(square);
+    }
 
-gridSquares.forEach((square) => {
+    // Add hover effect
+    const gridSquares = document.querySelectorAll('.square');
 
-    square.addEventListener('mouseover', () => {
-        square.classList.add('hover');
-    })
+    gridSquares.forEach((square) => {
+
+        square.addEventListener('mouseover', () => {
+            square.classList.add('hover');
+        })
+    });
+
+}
+
+const button = document.querySelector('button');
+button.addEventListener('click', () => {
+    usrInputGridSize = prompt('How many squares in grid u wants?');
+    document.querySelectorAll('.square').forEach(e => e.remove());
+    draw(usrInputGridSize);
 });
+
