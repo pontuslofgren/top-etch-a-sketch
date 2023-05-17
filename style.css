@@ -1,28 +1,49 @@
-#wrapper {
-    width: 400px;
-    margin: 15px auto 15px auto;
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+#header {
     text-align: center;
+    background-color: #3a5a40;
+    padding: 25px;
+    border-bottom: 1px solid #344e41;
+    color: #dad7cd;
 }
 button {
     margin: 15px auto 15px auto;
+    width: 400px;
+    height: 50px;
+    background-color: #588157;
+    border: 1px solid #344e41;
+    border-radius: 5px;
+    color: #dad7cd;
+    transition: 0.4s;
+}
+button:hover {
+    background-color: #3a5a40;
 }
 #container {
     width: 400px;
     display: flex;
     flex-wrap: wrap;
     background-color: gray;
-    border: 1px solid black;   
-    margin: 15px auto 15px auto; 
-
+    border: 1px solid #dad7cd;   
+    margin: 15px auto 15px auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .square {
     flex: 0 0 auto;
     background-color: white;
-    border: 1px solid black;
+    border: 1px solid #dad7cd;
     box-sizing: border-box;    
 }
 .hover {
-    background-color: red;
+    background-color: #3a5a40;
+    border: 0px;
 }
 .square>.default {
     background-color: grey;
