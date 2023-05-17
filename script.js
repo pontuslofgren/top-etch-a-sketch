@@ -1,5 +1,5 @@
 // store number of squares in a variable
-let numberOfSquares = 16;
+let numberOfSquares = Math.pow(16, 2)
 
 // set square dimension based on numberOfSquares
 const squareDimension = 400 / Math.sqrt(numberOfSquares);
@@ -15,5 +15,3 @@ for (let i = 0; i < numberOfSquares; i++) {
     container.appendChild(square);
   }
 
-
-// Assign CSS style - calculate height and width based on number of squares
