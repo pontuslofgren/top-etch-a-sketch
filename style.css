@@ -1,17 +1,17 @@
-div {
-    box-sizing: border-box;
-}
  #container {
     width: 400px;
     margin: 15px auto 15px auto;
     display: flex;
     flex-wrap: wrap;
     background-color: gray;
+    border: 1px solid black;    
+
 }
 .square {
     flex: 0 0 auto;
     background-color: white;
-    border: 1px solid black;    
+    border: 1px solid black;
+    box-sizing: border-box;    
 }
 .square>.default {
     background-color: grey;

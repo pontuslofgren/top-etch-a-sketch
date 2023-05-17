@@ -1,7 +1,7 @@
-// store number of squares in a variable
+// Store number of squares in grid to a variable
 let numberOfSquares = Math.pow(16, 2)
 
-// set square dimension based on numberOfSquares
+// Set square dimension based on numberOfSquares
 const squareDimension = 400 / Math.sqrt(numberOfSquares);
 
 // Create grid
