@@ -5,15 +5,17 @@ draw(usrInputGridSize);
 // Ask user for grid size. Max is capped to 100
 const button = document.querySelector('button');
 button.addEventListener('click', () => {
-    usrInputGridSize = prompt('How many squares in grid u wants?');
 
-    if (usrInputGridSize > 100) {
-        usrInputGridSize = prompt('Sorry, cannot be more than 100');
-    } else {
-        document.querySelectorAll('.square').forEach(e => e.remove());
-        draw(usrInputGridSize);
+    do {
+    usrInputGridSize = prompt('How many squares do you want per row/column in the grid?. Max 100.');
     }
+    while (usrInputGridSize > 100);
+    
+    document.querySelectorAll('.square').forEach(e => e.remove());
+    draw(usrInputGridSize)
+
 });
+
 
 // Function to generate grid and hover effect
 function draw(usrInputGridSize) {
