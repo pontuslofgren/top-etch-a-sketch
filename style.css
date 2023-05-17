@@ -2,15 +2,15 @@ div {
     box-sizing: border-box;
 }
  #container {
-    width: 200px;
+    width: 400px;
     margin: 15px auto 15px auto;
     display: flex;
     flex-wrap: wrap;
     background-color: gray;
 }
 .square {
-    flex: 0 0 50px;
-    height: 50px;
+    flex: 0 0 100px;
+    height: 100px;
     background-color: white;
     border: 1px solid black;    
 }
