@@ -1,6 +1,21 @@
-// Store number of squares in grid to a variable
+// Initalize grid size and generate default grid
 let usrInputGridSize = 16;
+draw(usrInputGridSize);
 
+// Ask user for grid size. Max is capped to 100
+const button = document.querySelector('button');
+button.addEventListener('click', () => {
+    usrInputGridSize = prompt('How many squares in grid u wants?');
+
+    if (usrInputGridSize > 100) {
+        usrInputGridSize = prompt('Sorry, cannot be more than 100');
+    } else {
+        document.querySelectorAll('.square').forEach(e => e.remove());
+        draw(usrInputGridSize);
+    }
+});
+
+// Function to generate grid and hover effect
 function draw(usrInputGridSize) {
 
     let numberOfSquares = Math.pow(usrInputGridSize, 2)
@@ -30,11 +45,3 @@ function draw(usrInputGridSize) {
     });
 
 }
-
-const button = document.querySelector('button');
-button.addEventListener('click', () => {
-    usrInputGridSize = prompt('How many squares in grid u wants?');
-    document.querySelectorAll('.square').forEach(e => e.remove());
-    draw(usrInputGridSize);
-});
-
