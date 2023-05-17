@@ -13,6 +13,9 @@
     border: 1px solid black;
     box-sizing: border-box;    
 }
+.hover {
+    background-color: red;
+}
 .square>.default {
     background-color: grey;
 }

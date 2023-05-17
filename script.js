@@ -15,3 +15,13 @@ for (let i = 0; i < numberOfSquares; i++) {
     container.appendChild(square);
   }
 
+
+// Add hover effect
+  const gridSquares = document.querySelectorAll('.square');
+
+gridSquares.forEach((square) => {
+
+    square.addEventListener('mouseover', () => {
+        square.classList.add('hover');
+    })
+});
